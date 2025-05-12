@@ -11,10 +11,10 @@ DROP TABLE IF EXISTS locations;
 DROP TABLE IF EXISTS host;
 DROP TABLE IF EXISTS cancellation_policy;
 
----Table to store different cancellation policy types
-CREATE TABLE cancellation_policy (
+---Table to store different cancelation policy types
+CREATE TABLE cancelation_policy (
   cancelation_policy_id INT PRIMARY KEY,
-  cancellation_policy TEXT
+  cancelation_policy TEXT
 );
 
 --- Table to store host-related information.
