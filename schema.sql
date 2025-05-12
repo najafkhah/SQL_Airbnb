@@ -52,7 +52,7 @@ CREATE TABLE listing (
   license TEXT,
   FOREIGN KEY (host_id) REFERENCES host(host_id),
   FOREIGN KEY (location_id) REFERENCES locations(location_id),
-  FOREIGN KEY (cancellation_policy_id) REFERENCES cancellation_policy(cancellation_policy_id)
+  FOREIGN KEY (cancelation_policy_id) REFERENCES cancelation_policy(cancellation_policy_id)
 );
 
 -- Table to store review information for each listing.
