@@ -2,14 +2,14 @@
   Airbnb Listings Database Schema
   --------------------------------
   This schema defines the structure for an Airbnb-style listings database.
-  It includes tables for hosts, locations, listings, cancellation policies, and reviews.*/
+  It includes tables for hosts, locations, listings, cancelation policies, and reviews.*/
 
 -- Drop existing tables if needed (run with caution)
 DROP TABLE IF EXISTS review;
 DROP TABLE IF EXISTS listing;
 DROP TABLE IF EXISTS locations;
 DROP TABLE IF EXISTS host;
-DROP TABLE IF EXISTS cancellation_policy;
+DROP TABLE IF EXISTS cancelation_policy;
 
 ---Table to store different cancelation policy types
 CREATE TABLE cancelation_policy (
@@ -42,7 +42,7 @@ CREATE TABLE listing (
   host_id INT,
   room_type TEXT,
   location_id INT,
-  cancellation_policy_id INT,
+  cancelation_policy_id INT,
   construction_year INT,
   price DECIMAL(10, 2),
   service_fee DECIMAL(10, 2),
