@@ -50,3 +50,24 @@ SELECT
   COUNT(*) AS total_listings
 FROM listing
 GROUP BY room_type;
+
+--  Find listings priced above the overall average price
+SELECT 
+  l.id,
+  l.name,
+  l.price
+FROM listing l
+WHERE l.price > (
+  SELECT AVG(price) FROM listing
+);
+
+
+-- Find hosts who have more listings than the average number of listings per host
+SELECT 
+  host_id,
+  host_name,
+  calculated_host_listings_count
+FROM host
+WHERE calculated_host_listings_count > (
+  SELECT AVG(calculated_host_listings_count) FROM host
+);
